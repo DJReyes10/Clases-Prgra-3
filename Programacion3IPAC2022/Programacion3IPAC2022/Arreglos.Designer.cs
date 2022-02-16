@@ -30,6 +30,8 @@
         {
             this.EjecutarButton = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.MatrizButton = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // EjecutarButton
@@ -51,11 +53,32 @@
             this.listBox1.Size = new System.Drawing.Size(125, 139);
             this.listBox1.TabIndex = 1;
             // 
+            // MatrizButton
+            // 
+            this.MatrizButton.Location = new System.Drawing.Point(533, 18);
+            this.MatrizButton.Name = "MatrizButton";
+            this.MatrizButton.Size = new System.Drawing.Size(96, 28);
+            this.MatrizButton.TabIndex = 2;
+            this.MatrizButton.Text = "Ejecutar Matriz";
+            this.MatrizButton.UseVisualStyleBackColor = true;
+            this.MatrizButton.Click += new System.EventHandler(this.MatrizButton_Click);
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 15;
+            this.listBox2.Location = new System.Drawing.Point(508, 86);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(130, 139);
+            this.listBox2.TabIndex = 3;
+            // 
             // Arreglos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(755, 380);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.MatrizButton);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.EjecutarButton);
             this.Name = "Arreglos";
@@ -68,5 +91,7 @@
 
         private Button EjecutarButton;
         private ListBox listBox1;
+        private Button MatrizButton;
+        private ListBox listBox2;
     }
 }

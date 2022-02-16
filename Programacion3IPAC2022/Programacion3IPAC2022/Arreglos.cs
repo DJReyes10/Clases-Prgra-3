@@ -48,5 +48,39 @@ namespace Programacion3IPAC2022
 
 
         }
+
+        private void MatrizButton_Click(object sender, EventArgs e)
+        {
+            int[,] matriz1 = new int[2, 3]
+                                        {
+                                            {4,5,30 },
+                                            {9,7,10 }
+                                        };
+
+
+            int[,] matriz2 = new int[3, 3];
+
+
+
+            //Llenar la matriz
+            for (int fila = 0; fila < matriz2.GetLength(0); fila++)
+            {
+                for (int columna = 0; columna < matriz2.GetLength(1); columna++)
+                {
+                    matriz2[fila, columna] = 4 + (fila + 4) * (columna + 3);
+                }
+            }
+
+            //Mostrar la matriz en el listbox
+            for (int fila = 0; fila < matriz2.GetLength(0); fila++)
+            {
+                for (int columna = 0; columna < matriz2.GetLength(1); columna++)
+                {
+                    listBox2.Items.Add("La posición: [" + fila + "," + columna + "] = " + matriz2[fila,columna]);
+                }
+            }
+
+
+        }
     }
 }
